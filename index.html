@@ -4,18 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AV GLOBAL PATH</title>
-    <meta
-      name="description"
-      content="AV Global Path — international brokerage and logistics connecting buyers and suppliers worldwide."
-    />
-    <link rel="icon" href="./Images/logo.jpg" />
-    <!-- Use the project's CSS (capitalization matches file) -->
-    <link rel="stylesheet" href="Style.css" />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -23,14 +12,13 @@
   </head>
 
   <body>
-    <a class="skip-link" href="#main">Skip to main content</a>
     <!-- NAVBAR -->
     <header class="navbar">
       <a href="#hero" class="logo">
         <img src="./Images/logo.jpg" alt="AV Global Path Logo" />
         <h1>AV Global Path</h1>
       </a>
-      <nav role="navigation">
+      <nav>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
@@ -40,22 +28,15 @@
         </ul>
       </nav>
       <!-- Hamburger Icon for Mobile -->
-      <button
-        class="menu-toggle"
-        id="menu-toggle"
-        aria-label="Toggle menu"
-        aria-expanded="false"
-      >
+      <div class="menu-toggle" id="menu-toggle">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
-      </button>
+      </div>
     </header>
 
-  <!-- HERO SECTION WITH SLIDER -->
-  <main id="main">
-  <div class="hero" id="hero">
-      <div class="hero-overlay" aria-hidden="true"></div>
+    <!-- HERO SECTION WITH SLIDER -->
+    <div class="hero">
       <div class="slides">
         <div
           class="slide active"
@@ -64,7 +45,6 @@
           <div class="slide-content">
             <h1>AV GLOBAL PATH</h1>
             <p>Connecting Global Trade Seamlessly</p>
-            <a class="cta-btn" href="#contact">Get in Touch</a>
           </div>
         </div>
         <div
@@ -74,7 +54,6 @@
           <div class="slide-content">
             <h1>Global Network</h1>
             <p>Building Trusted Partnerships Worldwide</p>
-            <a class="cta-btn" href="#contact">Our Services</a>
           </div>
         </div>
         <div
@@ -84,19 +63,18 @@
           <div class="slide-content">
             <h1>Reliable Brokerage</h1>
             <p>Delivering Quality and Transparency</p>
-            <a class="cta-btn" href="#contact">Contact Sales</a>
           </div>
         </div>
       </div>
 
       <div class="slider-controls">
-        <button class="arrow" id="prev" aria-label="Previous slide">&#10094;</button>
-        <div class="dots" role="tablist" aria-label="Homepage slides">
-          <button class="dot active" data-index="0" aria-label="Slide 1" aria-pressed="true"></button>
-          <button class="dot" data-index="1" aria-label="Slide 2" aria-pressed="false"></button>
-          <button class="dot" data-index="2" aria-label="Slide 3" aria-pressed="false"></button>
+        <span class="arrow" id="prev">&#10094;</span>
+        <div class="dots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
         </div>
-        <button class="arrow" id="next" aria-label="Next slide">&#10095;</button>
+        <span class="arrow" id="next">&#10095;</span>
       </div>
     </div>
 
@@ -145,7 +123,7 @@
       <h2>What We Deal In</h2>
       <div class="services">
         <div class="card">
-          <img src="./Images/mines.jpg" alt="Mines & Coals" loading="lazy" />
+          <img src="./Images/mines.jpg" alt="Mines & Coals" />
           <h3>Mines & Coals</h3>
           <p>
             Sourcing high-quality mining materials and industrial coal for
@@ -153,7 +131,7 @@
           </p>
         </div>
         <div class="card">
-          <img src="./Images/fertilizer.jpg" alt="Fertilizers" loading="lazy" />
+          <img src="./Images/fertilizer.jpg" alt="Fertilizers" />
           <h3>Fertilizers</h3>
           <p>
             Global supply chain management for various agricultural fertilizers
@@ -161,7 +139,7 @@
           </p>
         </div>
         <div class="card">
-          <img src="./Images/oil.jpg" alt="Oil & Gas" loading="lazy" />
+          <img src="./Images/oil.jpg" alt="Oil & Gas" />
           <h3>Oil & Gas</h3>
           <p>
             Brokering crude oil, refined petroleum products, and natural gas
@@ -169,7 +147,7 @@
           </p>
         </div>
         <div class="card">
-          <img src="./Images/grains.jpg" alt="Grains" loading="lazy" />
+          <img src="./Images/grains.jpg" alt="Grains" />
           <h3>Grains (Rice, Wheat, Corn, etc.)</h3>
           <p>
             Large-scale international trade of staple food grains, ensuring food
@@ -177,7 +155,7 @@
           </p>
         </div>
         <div class="card">
-          <img src="./Images/medical.jpg" alt="Medical Equipment" loading="lazy" />
+          <img src="./Images/medical.jpg" alt="Medical Equipment" />
           <h3>Medical Equipment</h3>
           <p>
             Facilitating the trade of essential hospital supplies, advanced
@@ -202,7 +180,6 @@
           src="./Images/CountryFlags/Worldmap.svg"
           alt="World Map"
           class="world-map"
-          loading="lazy"
         />
 
         <!-- Location Markers -->
@@ -213,7 +190,6 @@
               src="./Images/CountryFlags/Bangladesh.png"
               alt="BD"
               class="flag-img"
-              loading="lazy"
             />
             Bangladesh
           </h3>
@@ -227,7 +203,6 @@
               src="./Images/CountryFlags/SouthKorea.png"
               alt="KR"
               class="flag-img"
-              loading="lazy"
             />
             South Korea
           </h3>
@@ -241,7 +216,6 @@
               src="./Images/CountryFlags/MiddleEast.png"
               alt="ME"
               class="flag-img"
-              loading="lazy"
             />
             Middle East
           </h3>
@@ -255,7 +229,6 @@
               src="./Images/CountryFlags/India.png"
               alt="IN"
               class="flag-img"
-              loading="lazy"
             />
             India
           </h3>
@@ -269,7 +242,6 @@
               src="./Images/CountryFlags/Nepal.png"
               alt="NP"
               class="flag-img"
-              loading="lazy"
             />
             Nepal
           </h3>
@@ -283,7 +255,6 @@
               src="./Images/CountryFlags/Bhutan.png"
               alt="BT"
               class="flag-img"
-              loading="lazy"
             />
             Bhutan
           </h3>
@@ -297,7 +268,6 @@
               src="./Images/CountryFlags/SouthAfrica.png"
               alt="ZA"
               class="flag-img"
-              loading="lazy"
             />
             South Africa
           </h3>
@@ -416,7 +386,7 @@
     </section>
 
     <!-- WHY CHOOSE US -->
-    <section class="why-choose">
+    <section class="why-choose" id="why">
       <h2>Why Choose Us</h2>
       <div class="reasons">
         <div class="card">
@@ -483,22 +453,16 @@
             <a
               href="https://bd.linkedin.com/company/av-global-path"
               aria-label="LinkedIn Profile"
-              target="_blank"
-              rel="noopener noreferrer"
               ><i class="fab fa-linkedin"></i
             ></a>
             <a
               href="https://www.instagram.com/avairticket"
               aria-label="Instagram Profile"
-              target="_blank"
-              rel="noopener noreferrer"
               ><i class="fab fa-instagram-square"></i
             ></a>
             <a
               href="https://www.facebook.com/avtravel763/"
               aria-label="Facebook Profile"
-              target="_blank"
-              rel="noopener noreferrer"
               ><i class="fab fa-facebook-square"></i
             ></a>
           </div>

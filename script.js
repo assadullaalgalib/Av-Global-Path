@@ -3,7 +3,6 @@ const dots = document.querySelectorAll(".dot");
 let currentSlide = 0;
 const totalSlides = slides.length;
 let autoSlideTimer;
-let isPaused = false; // for hover/focus pause
 
 /*
  SLIDER FUNCTIONALITY
@@ -36,19 +35,9 @@ document.getElementById("prev").addEventListener("click", () => {
 
 dots.forEach((dot) => {
   dot.addEventListener("click", (e) => {
-    const index = parseInt(e.currentTarget.dataset.index);
+    const index = parseInt(e.target.dataset.index);
     showSlide(index);
-    // update aria-pressed on all dots
-    dots.forEach(d => d.setAttribute('aria-pressed','false'));
-    e.currentTarget.setAttribute('aria-pressed','true');
     resetAutoSlide();
-  });
-  // allow keyboard activation
-  dot.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      e.currentTarget.click();
-    }
   });
 });
 
@@ -70,15 +59,9 @@ const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 const navbar = document.querySelector(".navbar");
 
-// Scroll-spy: collect nav links and target sections
-const navAnchors = document.querySelectorAll('.nav-links a');
-const sections = Array.from(navAnchors).map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
-
 menuToggle.addEventListener("click", () => {
-  const expanded = menuToggle.classList.toggle("active");
   navLinks.classList.toggle("active");
-  // update aria attribute for accessibility
-  menuToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+  menuToggle.classList.toggle("active");
 });
 
 navLinks.querySelectorAll("a").forEach((link) => {
@@ -86,49 +69,9 @@ navLinks.querySelectorAll("a").forEach((link) => {
     if (navLinks.classList.contains("active")) {
       navLinks.classList.remove("active");
       menuToggle.classList.remove("active");
-      menuToggle.setAttribute('aria-expanded', 'false');
     }
   });
 });
-
-// Toggle .scrolled on navbar when window scrolls past 80px
-function handleNavbarScroll() {
-  if (window.scrollY > 80) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-}
-window.addEventListener('scroll', handleNavbarScroll);
-handleNavbarScroll();
-
-// IntersectionObserver for sections -> update active nav link
-if ('IntersectionObserver' in window && sections.length) {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const id = entry.target.id;
-      const anchor = document.querySelector(`.nav-links a[href="#${id}"]`);
-      if (entry.isIntersecting) {
-        navAnchors.forEach(a => a.classList.remove('active'));
-        if (anchor) anchor.classList.add('active');
-      }
-    });
-  }, { root: null, rootMargin: '0px 0px -60% 0px', threshold: 0 });
-
-  sections.forEach(sec => observer.observe(sec));
-} else {
-  // Fallback: on scroll, compute nearest section
-  window.addEventListener('scroll', () => {
-    let index = sections.findIndex((sec, i) => {
-      const rect = sec.getBoundingClientRect();
-      return rect.top >= 0 && rect.top < window.innerHeight * 0.4;
-    });
-    if (index === -1) index = 0;
-    navAnchors.forEach(a => a.classList.remove('active'));
-    const active = navAnchors[index];
-    if (active) active.classList.add('active');
-  });
-}
 
 document.addEventListener("click", function (event) {
   const clickedElement = event.target;
@@ -150,7 +93,6 @@ document.addEventListener("click", function (event) {
   ) {
     navLinks.classList.remove("active");
     menuToggle.classList.remove("active");
-    menuToggle.setAttribute('aria-expanded', 'false');
   }
 });
 
@@ -178,48 +120,6 @@ document.addEventListener("DOMContentLoaded", () => {
   showSlide(0);
   startAutoSlide();
   checkVisibility();
-});
-
-// Pause slider when user hovers or focuses on the hero area
-const hero = document.querySelector('.hero');
-if (hero) {
-  hero.addEventListener('mouseenter', () => {
-    clearInterval(autoSlideTimer);
-    isPaused = true;
-  });
-  hero.addEventListener('mouseleave', () => {
-    if (isPaused) resetAutoSlide();
-    isPaused = false;
-  });
-  // keyboard focus pause
-  hero.addEventListener('focusin', () => {
-    clearInterval(autoSlideTimer);
-    isPaused = true;
-  });
-  hero.addEventListener('focusout', () => {
-    if (isPaused) resetAutoSlide();
-    isPaused = false;
-  });
-}
-
-// Keyboard navigation: left/right arrows to navigate slides, space to toggle play/pause
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'ArrowRight') {
-    nextSlide();
-    resetAutoSlide();
-  } else if (e.key === 'ArrowLeft') {
-    prevSlide();
-    resetAutoSlide();
-  } else if (e.key === ' ' || e.code === 'Space') {
-    // Toggle pause/play
-    e.preventDefault();
-    if (autoSlideTimer) {
-      clearInterval(autoSlideTimer);
-      autoSlideTimer = null;
-    } else {
-      startAutoSlide();
-    }
-  }
 });
 
 /*

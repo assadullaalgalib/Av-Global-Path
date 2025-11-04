@@ -3,48 +3,56 @@
 */
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/*
+ 2. NAVIGATION BAR
+*/
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: linear-gradient(90deg, rgba(0, 74, 173, 0.95), rgba(0, 102, 204, 0.95));
+  background: rgba(0, 74, 173, 0.15);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 6%;
+  padding: 10px 20px;
   z-index: 1000;
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.18);
-  transition: background-color 0.3s ease, padding 0.25s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Shrink navbar when page is scrolled */
-.navbar.scrolled {
-  padding: 8px 6%;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.22);
-  backdrop-filter: blur(4px);
+.navbar a {
+  text-decoration: none;
 }
-
-.navbar.scrolled .logo img {
-  transform: scale(0.88);
-}
-
-.navbar a { text-decoration: none; }
 
 .navbar .logo {
   font-size: 1rem;
   color: #fff;
   display: flex;
-  gap: 12px;
+  gap: 10px;
+  justify-content: center;
   align-items: center;
 }
 
 .logo img {
-  height: 48px;
+  height: 50px;
   width: auto;
-  transition: transform 0.3s ease;
-  border-radius: 8px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  transition: transform 0.3s;
+  border-radius: 50%;
 }
 
 .nav-links {
@@ -62,107 +70,10 @@
 }
 
 .nav-links li a:hover {
-  color: #ffd966;
-  border-bottom: 2px solid rgba(255,217,102,0.3);
+  color: #555;
+  border-bottom: 2px solid #555;
   padding-bottom: 3px;
 }
-
-/* Active nav link (scroll-spy) */
-.nav-links li a.active {
-  color: #ffd966;
-  border-bottom: 2px solid #ffd966;
-  padding-bottom: 3px;
-}
-/* Hamburger menu styles (Initially hidden) */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 30px;
-  height: 25px;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-.bar {
-  width: 100%;
-  height: 3px;
-  background-color: #fff;
-  border-radius: 5px;
-  transition: all 0.3s ease-in-out;
-}
-
-.menu-toggle.active .bar:nth-child(2) {
-  opacity: 0;
-}
-.menu-toggle.active .bar:nth-child(1) {
-  transform: translateY(11px) rotate(45deg);
-}
-.menu-toggle.active .bar:nth-child(3) {
-  transform: translateY(-11px) rotate(-45deg);
-}
-
-/* Hero overlay and CTA */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.45));
-  z-index: 1;
-  pointer-events: none;
-}
-
-.slide-content { color: #fff; z-index: 2; }
-
-.cta-btn {
-  display: inline-block;
-  margin-top: 18px;
-  background: linear-gradient(90deg,#ffcc00,#ffb000);
-  color: #00203b;
-  padding: 10px 18px;
-  border-radius: 999px;
-  font-weight: 700;
-  text-decoration: none;
-  box-shadow: 0 8px 25px rgba(255,176,0,0.18);
-  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s;
-}
-
-.cta-btn:hover, .cta-btn:focus {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 35px rgba(255,176,0,0.28);
-  opacity: 0.98;
-}
-
-/* Ensure slide controls remain above overlay */
-.slider-controls, .arrow, .dots { z-index: 3; }
-
-/* Skip link for keyboard users */
-.skip-link {
-  position: absolute;
-  left: -999px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-.skip-link:focus {
-  left: 20px;
-  top: 12px;
-  width: auto;
-  height: auto;
-  padding: 8px 12px;
-  background: #004aad;
-  color: #fff;
-  border-radius: 6px;
-  z-index: 2000;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-}
-
-/* Make dots and arrows keyboard-focusable and visible */
-.dot, .arrow { border: none; background: transparent; cursor: pointer; }
-.dot { width: 12px; height: 12px; border-radius: 50%; background-color: rgba(255,255,255,0.6); }
-.dot[aria-pressed="true"] { background-color: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.25); }
-.dot:focus, .arrow:focus { outline: 3px solid rgba(0,119,255,0.25); border-radius: 6px; }
 
 /* Hamburger menu styles (Initially hidden) */
 .menu-toggle {
@@ -301,10 +212,6 @@
 section {
   padding: 80px 10%;
 }
-
-/* Prevent fixed navbar from covering content when navigating to anchors */
-#main { padding-top: 88px; }
-section { scroll-margin-top: 110px; }
 
 section h2 {
   font-size: 2rem;

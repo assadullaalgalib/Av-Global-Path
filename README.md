@@ -29,4 +29,3 @@ Recent changes made
 - Contact form still uses mailto but UX was improved with a success message.
 
 If you'd like additional changes (different color palette, contact form backend, or accessibility audit), tell me which and I'll implement them.
-
