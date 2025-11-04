@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AV GLOBAL PATH</title>
+    <meta
+      name="description"
+      content="AV Global Path — international brokerage and logistics connecting buyers and suppliers worldwide."
+    />
+    <link rel="icon" href="./Images/logo.jpg" />
+    <!-- Use the project's CSS (capitalization matches file) -->
+    <link rel="stylesheet" href="Style.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <a href="#hero" class="logo">
+        <img src="./Images/logo.jpg" alt="AV Global Path Logo" />
+        <h1>AV Global Path</h1>
+      </a>
+      <nav role="navigation">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#reach">Global Reach</a></li>
+          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- Hamburger Icon for Mobile -->
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+      >
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </header>
+
+  <!-- HERO SECTION WITH SLIDER -->
+  <main id="main">
+  <div class="hero" id="hero">
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="slides">
+        <div
+          class="slide active"
+          style="background-image: url('./Images/Slider/Slider1.png')"
+        >
+          <div class="slide-content">
+            <h1>AV GLOBAL PATH</h1>
+            <p>Connecting Global Trade Seamlessly</p>
+            <a class="cta-btn" href="#contact">Get in Touch</a>
+          </div>
+        </div>
+        <div
+          class="slide"
+          style="background-image: url('./Images/Slider/Slider2.png')"
+        >
+          <div class="slide-content">
+            <h1>Global Network</h1>
+            <p>Building Trusted Partnerships Worldwide</p>
+            <a class="cta-btn" href="#contact">Our Services</a>
+          </div>
+        </div>
+        <div
+          class="slide"
+          style="background-image: url('./Images/Slider/Slider3.png')"
+        >
+          <div class="slide-content">
+            <h1>Reliable Brokerage</h1>
+            <p>Delivering Quality and Transparency</p>
+            <a class="cta-btn" href="#contact">Contact Sales</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-controls">
+        <button class="arrow" id="prev" aria-label="Previous slide">&#10094;</button>
+        <div class="dots" role="tablist" aria-label="Homepage slides">
+          <button class="dot active" data-index="0" aria-label="Slide 1" aria-pressed="true"></button>
+          <button class="dot" data-index="1" aria-label="Slide 2" aria-pressed="false"></button>
+          <button class="dot" data-index="2" aria-label="Slide 3" aria-pressed="false"></button>
+        </div>
+        <button class="arrow" id="next" aria-label="Next slide">&#10095;</button>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" class="about-section fade-in">
+      <div class="about-card">
+        <div class="about-inner">
+          <div class="about-front">
+            <div class="front-content">
+              <i class="fas fa-shipping-fast"></i>
+              <h2>Who We Are</h2>
+              <p>Your Global Logistics and Sourcing Experts.</p>
+            </div>
+          </div>
+          <div class="about-back">
+            <!-- <p>
+              <strong>AV GLOBAL PATH</strong> is dedicated to seamless
+              international trade, connecting you with reliable suppliers and
+              markets across the globe. We manage complexities so you can focus
+              on growth.
+            </p> -->
+            <div class="back-content">
+              <span class="text-line glow-text">
+                <span class="highlight reveal-text">AV GLOBAL PATH</span>
+                <span class="floating-words">
+                  <span>is a</span> <span>global</span> <span>brokerage</span>
+                  <span>firm</span>
+                  <!-- </span>
+                            facilitating international trade
+                        </span> -->
+                  <span class="text-line glow-text">
+                    facilitating international trade of commodities and
+                    equipment. We connect buyers and suppliers across borders
+                    through transparent, efficient trade solutions.</span
+                  >
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="fade-in">
+      <h2>What We Deal In</h2>
+      <div class="services">
+        <div class="card">
+          <img src="./Images/mines.jpg" alt="Mines & Coals" loading="lazy" />
+          <h3>Mines & Coals</h3>
+          <p>
+            Sourcing high-quality mining materials and industrial coal for
+            energy and manufacturing sectors.
+          </p>
+        </div>
+        <div class="card">
+          <img src="./Images/fertilizer.jpg" alt="Fertilizers" loading="lazy" />
+          <h3>Fertilizers</h3>
+          <p>
+            Global supply chain management for various agricultural fertilizers
+            to support crop growth.
+          </p>
+        </div>
+        <div class="card">
+          <img src="./Images/oil.jpg" alt="Oil & Gas" loading="lazy" />
+          <h3>Oil & Gas</h3>
+          <p>
+            Brokering crude oil, refined petroleum products, and natural gas
+            transactions globally.
+          </p>
+        </div>
+        <div class="card">
+          <img src="./Images/grains.jpg" alt="Grains" loading="lazy" />
+          <h3>Grains (Rice, Wheat, Corn, etc.)</h3>
+          <p>
+            Large-scale international trade of staple food grains, ensuring food
+            security and supply.
+          </p>
+        </div>
+        <div class="card">
+          <img src="./Images/medical.jpg" alt="Medical Equipment" loading="lazy" />
+          <h3>Medical Equipment</h3>
+          <p>
+            Facilitating the trade of essential hospital supplies, advanced
+            diagnostics, and surgical equipment.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GLOBAL REACH -->
+    <section id="reach">
+      <h2>Global Reach</h2>
+      <p>
+        We operate and have sourcing networks spanning across multiple
+        continents, connecting businesses with reliable suppliers and buyers
+        worldwide.
+      </p>
+
+      <!-- Interactive Map -->
+      <div class="map-container">
+        <img
+          src="./Images/CountryFlags/Worldmap.svg"
+          alt="World Map"
+          class="world-map"
+          loading="lazy"
+        />
+
+        <!-- Location Markers -->
+        <div class="location-marker" style="top: 50%; left: 72%"></div>
+        <div class="location-info" style="top: 47%; left: 74%">
+          <h3>
+            <img
+              src="./Images/CountryFlags/Bangladesh.png"
+              alt="BD"
+              class="flag-img"
+              loading="lazy"
+            />
+            Bangladesh
+          </h3>
+          <p>Main operations hub with extensive network</p>
+        </div>
+
+        <div class="location-marker" style="top: 39%; left: 82%"></div>
+        <div class="location-info" style="top: 36%; left: 84%">
+          <h3>
+            <img
+              src="./Images/CountryFlags/SouthKorea.png"
+              alt="KR"
+              class="flag-img"
+              loading="lazy"
+            />
+            South Korea
+          </h3>
+          <p>Strategic technology & equipment sourcing</p>
+        </div>
+
+        <div class="location-marker" style="top: 45%; left: 55%"></div>
+        <div class="location-info" style="top: 42%; left: 57%">
+          <h3>
+            <img
+              src="./Images/CountryFlags/MiddleEast.png"
+              alt="ME"
+              class="flag-img"
+              loading="lazy"
+            />
+            Middle East
+          </h3>
+          <p>Oil, gas & energy sector partnerships</p>
+        </div>
+
+        <div class="location-marker" style="top: 50%; left: 68%"></div>
+        <div class="location-info" style="top: 47%; left: 70%">
+          <h3>
+            <img
+              src="./Images/CountryFlags/India.png"
+              alt="IN"
+              class="flag-img"
+              loading="lazy"
+            />
+            India
+          </h3>
+          <p>Agricultural commodities & fertilizers</p>
+        </div>
+
+        <div class="location-marker" style="top: 46%; left: 69%"></div>
+        <div class="location-info" style="top: 43%; left: 71%">
+          <h3>
+            <img
+              src="./Images/CountryFlags/Nepal.png"
+              alt="NP"
+              class="flag-img"
+              loading="lazy"
+            />
+            Nepal
+          </h3>
+          <p>Cross-border commodity trading</p>
+        </div>
+
+        <div class="location-marker" style="top: 45%; left: 73%"></div>
+        <div class="location-info" style="top: 42%; left: 75%">
+          <h3>
+            <img
+              src="./Images/CountryFlags/Bhutan.png"
+              alt="BT"
+              class="flag-img"
+              loading="lazy"
+            />
+            Bhutan
+          </h3>
+          <p>Regional trade facilitation</p>
+        </div>
+
+        <div class="location-marker" style="top: 75%; left: 53%"></div>
+        <div class="location-info" style="top: 72%; left: 55%">
+          <h3>
+            <img
+              src="./Images/CountryFlags/SouthAfrica.png"
+              alt="ZA"
+              class="flag-img"
+              loading="lazy"
+            />
+            South Africa
+          </h3>
+          <p>Mining & minerals sourcing network</p>
+        </div>
+      </div>
+
+      <!-- Statistics -->
+      <div class="stats-container">
+        <div class="stat-box">
+          <i class="fas fa-globe-asia"></i>
+          <div class="number">7+</div>
+          <div class="label">Countries</div>
+        </div>
+        <div class="stat-box">
+          <i class="fas fa-handshake"></i>
+          <div class="number">3</div>
+          <div class="label">Continents</div>
+        </div>
+        <div class="stat-box">
+          <i class="fas fa-network-wired"></i>
+          <div class="number">24/7</div>
+          <div class="label">Global Support</div>
+        </div>
+      </div>
+
+      <!-- Countries Grid -->
+      <div class="countries-grid">
+        <div class="country-card">
+          <img
+            src="./Images/CountryFlags/Bangladesh.png"
+            alt="Bangladesh Flag"
+            class="flag-img"
+          />
+          <h3>Bangladesh</h3>
+          <p>
+            Primary operations center with comprehensive trade infrastructure
+            and logistics coordination.
+          </p>
+        </div>
+
+        <div class="country-card">
+          <img
+            src="./Images/CountryFlags/Bhutan.png"
+            alt="Bhutan Flag"
+            class="flag-img"
+          />
+          <h3>Bhutan</h3>
+          <p>
+            Regional trade facilitation with focus on cross-border commerce.
+          </p>
+        </div>
+
+        <div class="country-card">
+          <img
+            src="./Images/CountryFlags/India.png"
+            alt="India Flag"
+            class="flag-img"
+          />
+          <h3>India</h3>
+          <p>
+            Major agricultural commodity hub with extensive grain and fertilizer
+            networks.
+          </p>
+        </div>
+
+        <div class="country-card">
+          <img
+            src="./Images/CountryFlags/MiddleEast.png"
+            alt="Middle East Flag"
+            class="flag-img"
+          />
+          <h3>Middle East</h3>
+          <p>
+            Strategic energy sector relationships for oil, gas, and petroleum
+            products.
+          </p>
+        </div>
+
+        <div class="country-card">
+          <img
+            src="./Images/CountryFlags/Nepal.png"
+            alt="Nepal Flag"
+            class="flag-img"
+          />
+          <h3>Nepal</h3>
+          <p>Himalayan trade routes and commodity distribution networks.</p>
+        </div>
+
+        <div class="country-card">
+          <img
+            src="./Images/CountryFlags/SouthAfrica.png"
+            alt="South Africa Flag"
+            class="flag-img"
+          />
+          <h3>South Africa</h3>
+          <p>
+            Mining industry connections for coal, minerals, and natural
+            resources.
+          </p>
+        </div>
+
+        <div class="country-card">
+          <img
+            src="./Images/CountryFlags/SouthKorea.png"
+            alt="South Korea Flag"
+            class="flag-img"
+          />
+          <h3>South Korea</h3>
+          <p>
+            Advanced technology partnerships and medical equipment sourcing
+            capabilities.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-choose">
+      <h2>Why Choose Us</h2>
+      <div class="reasons">
+        <div class="card">
+          <i class="fas fa-globe-americas"></i>
+          <h3>Trusted global network</h3>
+          <p>
+            Leveraging deep connections with reliable suppliers and buyers
+            worldwide for optimal transactions.
+          </p>
+        </div>
+        <div class="card">
+          <i class="fas fa-clipboard-check"></i>
+          <h3>Transparent brokerage process</h3>
+          <p>
+            Clear, honest communication and documentation at every stage of the
+            trade cycle.
+          </p>
+        </div>
+        <div class="card">
+          <i class="fas fa-shipping-fast"></i>
+          <h3>Fast sourcing & logistics coordination</h3>
+          <p>
+            Efficient coordination of movement, inspection, and delivery,
+            minimizing lead times and risk.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact fade-in">
+      <h2>Contact Us</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Our Global Head Office</h3>
+          <p class="contact-subtext">
+            We are ready to assist with your global brokerage needs. Reach out
+            today!
+          </p>
+
+          <div class="info-item">
+            <i class="fas fa-location-dot contact-icon"></i>
+            <p>
+              Office: Suite-342, Level-3, R H Home Centre, Green Road, Dhaka,
+              Bangladesh
+            </p>
+          </div>
+
+          <div class="info-item">
+            <i class="fas fa-envelope contact-icon"></i>
+            <p>
+              <a href="mailto:avtravel763@gmail.com">avtravel763@gmail.com</a>
+            </p>
+          </div>
+
+          <div class="info-item">
+            <i class="fas fa-phone contact-icon"></i>
+            <p>
+              <a href="tel:+8801896318091">+8801896318091</a>
+            </p>
+          </div>
+
+          <div class="social-links">
+            <a
+              href="https://bd.linkedin.com/company/av-global-path"
+              aria-label="LinkedIn Profile"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/avairticket"
+              aria-label="Instagram Profile"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-instagram-square"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/avtravel763/"
+              aria-label="Facebook Profile"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-facebook-square"></i
+            ></a>
+          </div>
+        </div>
+
+        <form id="contact-form" onsubmit="sendMailto(event)">
+          <h3>Send Us a Message</h3>
+          <input
+            type="text"
+            id="name"
+            placeholder="Your Name"
+            name="name"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            placeholder="Your Email"
+            name="email"
+            required
+          />
+          <textarea
+            rows="5"
+            id="message"
+            placeholder="Your Message"
+            name="message"
+            required
+          ></textarea>
+          <button type="submit">Send Message</button>
+          <div id="form-message" class="form-message"></div>
+        </form>
+      </div>
+    </section>
+
+    <footer>© 2025 AV GLOBAL PATH. All Rights Reserved.</footer>
+
+    <button id="go-to-top" title="Go to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
