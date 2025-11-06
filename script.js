@@ -135,7 +135,14 @@ function sendMailto(event) {
   const email = document.getElementById("email").value;
   const message = document.getElementById("message").value;
 
-  const recipient = "avtravel763@gmail.com";
+  // Send contact form drafts to primary and CEO addresses
+  const recipients = [
+    "avtravel763@gmail.com",
+    "KMDMAMUN@GMAIL.COM",
+    "MARKETBEEZ21@GMAIL.COM",
+  ];
+  // Join with comma so most mail clients put all addresses in the To field
+  const recipient = recipients.join(",");
 
   const subject = encodeURIComponent(
     `New Contact Form Submission from ${name}`
@@ -150,7 +157,7 @@ function sendMailto(event) {
   const mailtoLink = `mailto:${recipient}?subject=${subject}&body=${body}`;
 
   statusMessage.textContent =
-    "Success! Opening your default email application... Please check your draft/outbox.";
+    "Success! Opening your default email application to compose a message to the listed recipients...";
   statusMessage.className = "form-message success";
 
   setTimeout(() => {
